@@ -1,0 +1,118 @@
+<nav><h1>BOOK STORE MANAGEMENT</h1></nav>
+<br><br>
+<!-- <div class="container mt-5">
+  <div class="row"> -->
+      <div class="d1">
+         <h4>ENTRY</h4>
+
+         <div class="container">
+          <div class="row justify-content-center">
+              <div class="col-md-10">
+                           <form #bookup="ngForm">
+        <!-- <nav><h1>BOOK STORE MANAGEMENT</h1></nav> -->
+        <div class="form-group">
+           <b><h5>Book Name :</h5></b>
+          <input type="text" name="bname" 
+          #bname="ngModel" ngModel placeholder="UserName">
+          </div>
+
+          <div class="form-group">
+            <b><h5>Book ID :</h5></b>
+           <input type="text" name="bid" 
+           #bid="ngModel" ngModel placeholder="Bookid">
+           </div>
+
+          <div class="form-group">
+          <b><h5>Book Price :</h5></b>
+          <input type="number" name="bprice" 
+          #bprice="ngModel" ngModel placeholder="amount">
+          </div>
+
+          <div class="form-group">
+          <b><h5>Book Buyer Name :</h5></b>
+          <input  type="text" name="bbuyer" 
+          #bbuyer="ngModel" ngModel placeholder="Buyer">
+          </div>
+          <br><br>
+
+
+          <!-- <div class="b1"> -->
+
+            <!-- <div> -->
+          <button  class="btn btn-success mt-3"  (click)="createuser(bookup.value)">Create User</button>
+        <!-- </div> -->
+
+        <!-- <div> -->
+            <button  class="btn btn-primary mt-3" (click)="edituser(bookup.value)">Edit</button>
+        <!-- </div> -->
+
+        <!-- <div> -->
+            <button  class="btn btn-danger mt-3" (click)="removeuser(bookup.value)">Remove User</button>
+        <!-- </div> -->
+
+        <!-- <div> -->
+            <button  class="btn btn-warning mt-3" (click)="finduser(bookup.value)">Find</button>
+        <!-- </div> -->
+
+        <!-- <div> -->
+            <button  class="btn btn-warning mt-3" (click)="findalluser()">Find All</button>
+        <!-- </div> -->
+
+    <!-- </div> -->
+                          </form>
+                        </div>
+                      </div>
+                  </div>
+</div>
+
+
+
+
+<div class="d2">
+ <h4> DATA BASE </h4>
+
+ <h3>{{result}}</h3>
+
+ <div style="width: 100%;" *ngIf="flag">
+    <table width="80%" align="center" class="table table-borderd">
+     <tr><th>Book Id</th><th>Book Name</th><th>Book Price</th><th>Book Buyer</th></tr> 
+      <tr *ngFor="let Book1 of BookArr">
+          <td> {{Book1.id}} </td><td> {{Book1.bname}} </td><td> {{Book1.bprice}} </td><td>{{Book1.bbuyer}}</td>
+      </tr>
+   </table>
+   </div>
+
+</div>
+          <!-- <input #myamo type="number"  [placeholder]="amount"> -->
+          <!-- <button (click)="onclic(myamo)" class="btn btn-danger mt-3">Create User</button> -->
+
+          <!-- <table class="table table-bordered mt-3">
+              <thead class="thead-light">
+                  <tr>
+                      <th>S.No</th>
+                      <th>BOOK Name</th>
+                      <th>Price</th>
+                      <th>Buyer Name</th>
+                      <th>Delete User</th>
+                      <th>Edit User</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let i of userlist; let j of useramount; let o of bookuser; index as userno" >
+                      <td>{{userno + 1}}</td>
+                      <td>{{i}}</td>
+                      <td>{{j}}userno</td>
+                      <td>{{o}}</td>
+                      <td>
+                          <button (click)="ondelete(userno)" class="btn btn-success">Remove User</button>
+                      </td>
+                      <td>
+                        <button (click)="offclick(myuser, myamo, mymem)" class="btn btn-info mt-3">Edit</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+
+      </div>
+  </div>
+</div> -->
